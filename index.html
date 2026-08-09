@@ -2,924 +2,201 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hajira & Ibrahim — Wedding Invitation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibrahim &amp; Hajira — Nikkah &amp; Valima Invitation</title>
+<meta name="author" content="Ibrahim &amp; Hajira">
+<meta name="description" content="Er. K. Mohammad Ibrahim weds Y. Hajira Khanam. Nikkah on 19 September 2026 in Chennai and Valima on 26 September 2026 in Trichy. Two cities, one union.">
+<link rel="preload" as="image" href="assets/floral-frame.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Parisienne&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Karla:wght@300;400;500;600&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
 <style>
-  :root{
-    --bg:#FBF3EC;
-    --panel:#FFFBF7;
-    --line:#CBA45C;
-    --line-soft:rgba(203,164,92,0.45);
-    --rose:#B54B5B;
-    --rose-deep:#8E3A47;
-    --blush:#F3D3D6;
-    --leaf:#8A9A72;
-    --leaf-deep:#5F7150;
-    --ink:#3A2E2B;
-    --ink-soft:#6b5f57;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:
-      radial-gradient(1200px 700px at 15% 0%, rgba(243,211,214,0.35), transparent 60%),
-      radial-gradient(1000px 700px at 85% 15%, rgba(203,164,92,0.12), transparent 55%),
-      var(--bg);
-    color:var(--ink);
-    font-family:'EB Garamond', serif;
-    font-size:18px;
-    line-height:1.7;
-    overflow-x:hidden;
-  }
-  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
-
-  .reveal{ opacity:0; transform:translateY(22px); transition:opacity 0.9s ease, transform 0.9s ease; }
-  .reveal.in{ opacity:1; transform:translateY(0); }
-
-  /* ================= NAV ================= */
-  .site-nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:16px 24px;
-    background:rgba(251,243,236,0);
-    transition:background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
-  }
-  .site-nav.scrolled{
-    background:rgba(255,251,247,0.92);
-    backdrop-filter:blur(10px);
-    box-shadow:0 6px 24px -14px rgba(58,46,43,0.35);
-    padding:10px 24px;
-  }
-  .nav-brand{
-    display:flex; align-items:center; gap:8px;
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    font-size:1.15rem;
-    letter-spacing:0.06em;
-    color:var(--ink);
-  }
-  .nav-brand svg{ width:18px; height:18px; }
-  .nav-links{
-    display:flex; gap:26px;
-    font-size:0.82rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-  }
-  .nav-links a{
-    color:var(--ink);
-    text-decoration:none;
-    padding-bottom:2px;
-    border-bottom:1px solid transparent;
-    transition:border-color 0.3s ease, color 0.3s ease;
-  }
-  .nav-links a:hover{ color:var(--rose-deep); border-color:var(--rose); }
-  .nav-toggle{ display:none; background:none; border:none; cursor:pointer; padding:4px; }
-  .nav-toggle span{ display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; }
-  @media (max-width:640px){
-    .nav-links{
-      position:fixed;
-      top:52px; right:16px; left:16px;
-      flex-direction:column;
-      gap:0;
-      background:var(--panel);
-      border:1px solid var(--line-soft);
-      border-radius:10px;
-      padding:8px 0;
-      transform:translateY(-12px);
-      opacity:0;
-      pointer-events:none;
-      transition:opacity 0.25s ease, transform 0.25s ease;
-    }
-    .nav-links.open{ opacity:1; transform:translateY(0); pointer-events:auto; }
-    .nav-links a{ padding:12px 20px; border-bottom:1px solid var(--line-soft); }
-    .nav-links a:last-child{ border-bottom:none; }
-    .nav-toggle{ display:block; }
-  }
-
-  /* ================= HERO ================= */
-  .hero{
-    position:relative;
-    min-height:100svh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    overflow:hidden;
-    color:#fff;
-    padding:40px 24px 60px;
-    margin-top:-72px;
-  }
-  .hero-bg{
-    position:absolute; inset:0;
-    background:
-      radial-gradient(closest-side at 50% 78%, rgba(255,214,153,0.65), transparent 70%),
-      linear-gradient(180deg, #3a2230 0%, #7a3d45 28%, #c06a52 52%, #e8a15f 72%, #f6c987 100%);
-    animation:kenburns 26s ease-in-out infinite alternate;
-  }
-  @keyframes kenburns{
-    0%{ transform:scale(1) translateY(0); }
-    100%{ transform:scale(1.08) translateY(-1%); }
-  }
-  .hero-vignette{
-    position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(20,10,14,0.35) 0%, rgba(20,10,14,0.08) 30%, rgba(20,10,14,0.15) 70%, rgba(20,10,14,0.55) 100%);
-  }
-  .hero-silhouette{
-    position:absolute;
-    bottom:0; left:50%;
-    transform:translateX(-50%);
-    width:min(70%, 360px);
-    opacity:0.96;
-  }
-  .petals{ position:absolute; inset:0; overflow:hidden; pointer-events:none; }
-  .petal{
-    position:absolute;
-    top:-5%;
-    width:14px; height:14px;
-    background:radial-gradient(circle at 30% 30%, #ffe3e8, #e79aa6 70%);
-    border-radius:60% 40% 60% 40%;
-    opacity:0.85;
-    animation:fall linear infinite;
-  }
-  @keyframes fall{
-    0%{ transform:translate(0,0) rotate(0deg); opacity:0; }
-    8%{ opacity:0.85; }
-    100%{ transform:translate(var(--drift,40px), 115vh) rotate(300deg); opacity:0.2; }
-  }
-  .hero-content{ position:relative; z-index:3; }
-  .hero-amp-top{
-    font-family:'Amiri', serif;
-    font-style:italic;
-    font-size:1.6rem;
-    color:#f3d9a8;
-    margin-bottom:2px;
-    text-shadow:0 2px 18px rgba(0,0,0,0.35);
-  }
-  .hero-title{
-    font-family:'Parisienne', cursive;
-    font-size:clamp(3.2rem, 15vw, 6rem);
-    line-height:1;
-    color:#fbe3a8;
-    text-shadow:0 4px 30px rgba(0,0,0,0.4);
-    animation:glow 4s ease-in-out infinite;
-  }
-  @keyframes glow{
-    0%,100%{ text-shadow:0 4px 30px rgba(0,0,0,0.4), 0 0 18px rgba(251,227,168,0.15); }
-    50%{ text-shadow:0 4px 30px rgba(0,0,0,0.4), 0 0 32px rgba(251,227,168,0.45); }
-  }
-  .hero-rule-row{
-    display:flex; align-items:center; gap:16px;
-    margin:20px auto 18px;
-    max-width:360px;
-  }
-  .hero-rule-row .line{ flex:1; height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); }
-  .hero-date{
-    font-family:'Cormorant Garamond', serif;
-    letter-spacing:0.14em;
-    font-size:1.05rem;
-    color:#fff;
-  }
-  .hero-tagline{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:1.15rem;
-    color:rgba(255,255,255,0.9);
-    margin-bottom:30px;
-  }
-  .countdown{
-    display:flex; gap:14px; justify-content:center;
-    margin-bottom:32px;
-    flex-wrap:wrap;
-  }
-  .countdown .cell{
-    background:rgba(255,255,255,0.12);
-    border:1px solid rgba(255,255,255,0.35);
-    backdrop-filter:blur(4px);
-    border-radius:8px;
-    padding:10px 14px;
-    min-width:62px;
-  }
-  .countdown .num{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    font-size:1.5rem;
-    color:#fff;
-    line-height:1;
-  }
-  .countdown .lbl{
-    font-size:0.6rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:rgba(255,255,255,0.75);
-    margin-top:4px;
-  }
-  .countdown-caption{
-    font-size:0.72rem;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:rgba(255,255,255,0.75);
-    margin-bottom:8px;
-  }
-  .hero-cta{
-    display:inline-block;
-    padding:15px 42px;
-    background:linear-gradient(135deg, #f6d488, #cf9a4a);
-    color:#3a2416;
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
-    font-size:0.85rem;
-    text-decoration:none;
-    border-radius:3px;
-    box-shadow:0 10px 26px -10px rgba(207,154,74,0.7);
-    transition:transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .hero-cta:hover{ transform:translateY(-2px); box-shadow:0 16px 32px -10px rgba(207,154,74,0.85); }
-  .hero-bouquet{
-    position:absolute;
-    bottom:-6px; left:50%;
-    transform:translateX(-50%);
-    width:min(80%, 320px);
-    z-index:2;
-    opacity:0.98;
-  }
-
-  .wrap{
-    max-width:640px;
-    margin:0 auto;
-    padding:70px 20px 90px;
-    position:relative;
-  }
-
-  /* ---------- floral corner ornament ---------- */
-  .floral-corner{ position:absolute; width:150px; height:150px; pointer-events:none; z-index:1; opacity:0.9; }
-  .floral-corner.tl{ top:-10px; left:-18px; }
-  .floral-corner.tr{ top:-10px; right:-18px; transform:scaleX(-1); }
-  .floral-corner.bl{ bottom:-10px; left:-18px; transform:scaleY(-1); }
-  .floral-corner.br{ bottom:-10px; right:-18px; transform:scale(-1,-1); }
-  @media (max-width:560px){
-    .floral-corner{ width:96px; height:96px; opacity:0.75; }
-  }
-
-  /* ---------- arch card ---------- */
-  .arch-card{
-    position:relative;
-    background:var(--panel);
-    border:1px solid var(--line-soft);
-    padding:56px 34px 44px;
-    border-radius:170px 170px 8px 8px;
-    text-align:center;
-    box-shadow:0 30px 60px -35px rgba(58,46,43,0.35);
-    margin-bottom:64px;
-    overflow:hidden;
-  }
-  .arch-card::before{
-    content:"";
-    position:absolute;
-    inset:12px;
-    border:1px solid var(--line-soft);
-    border-radius:150px 150px 4px 4px;
-    pointer-events:none;
-  }
-  .arch-inner{ position:relative; z-index:2; }
-
-  .bismillah-ar{
-    font-family:'Amiri', serif;
-    font-size:1.6rem;
-    color:var(--rose-deep);
-    margin-bottom:8px;
-  }
-  .bismillah-en{
-    font-size:0.68rem;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin-bottom:6px;
-  }
-  .mini-rule{
-    width:34px; height:1px;
-    background:var(--line);
-    margin:14px auto 26px;
-  }
-
-  /* medallion */
-  .medallion{
-    width:150px; height:150px;
-    margin:0 auto 26px;
-  }
-
-  .family-row{
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    gap:22px;
-    margin-bottom:22px;
-  }
-  .family-row .fam{ flex:1; max-width:190px; }
-  .family-row .fam .label{
-    font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:2px;
-  }
-  .family-row .fam .name{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    font-size:1.02rem;
-    color:var(--ink);
-  }
-  .family-row .amp{
-    font-family:'Amiri', serif;
-    font-style:italic;
-    font-size:1.3rem;
-    color:var(--rose);
-    padding-top:8px;
-  }
-
-  .invite-line{
-    font-size:0.72rem;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin-bottom:4px;
-  }
-  .ceremony-tag{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    font-size:1.35rem;
-    letter-spacing:0.04em;
-    color:var(--rose-deep);
-    text-transform:uppercase;
-    margin:2px 0 4px;
-  }
-  .of-children{
-    font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft);
-    margin-bottom:18px;
-  }
-
-  .couple-names{
-    font-family:'Parisienne', cursive;
-    font-size:clamp(2.6rem, 9vw, 3.6rem);
-    color:var(--rose);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:14px;
-    line-height:1;
-    margin-bottom:26px;
-  }
-  .heart-icon{ width:0.55em; height:0.55em; flex-shrink:0; }
-
-  .date-row{
-    display:flex;
-    align-items:stretch;
-    justify-content:center;
-    gap:0;
-    margin:0 auto 26px;
-    max-width:420px;
-  }
-  .date-cell{
-    flex:1;
-    padding:6px 10px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    border-left:1px solid var(--line-soft);
-  }
-  .date-cell:first-child{ border-left:none; }
-  .date-cell .top{
-    font-family:'Cormorant Garamond', serif;
-    font-size:0.85rem;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--ink);
-  }
-  .date-cell.mid .day{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    font-size:2.1rem;
-    color:var(--rose-deep);
-    line-height:1;
-  }
-  .date-cell.mid .month{
-    font-size:0.7rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-  }
-  .date-cell.mid .year{
-    font-size:0.7rem;
-    color:var(--ink-soft);
-  }
-
-  .venue-label{
-    font-size:0.7rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose-deep); margin-bottom:6px;
-  }
-  .venue-name{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    font-size:1.15rem;
-    color:var(--ink);
-    margin-bottom:6px;
-  }
-  .venue-addr{
-    font-size:0.92rem;
-    color:var(--ink-soft);
-    margin-bottom:6px;
-  }
-  .landmark{
-    font-size:0.78rem;
-    color:var(--ink-soft);
-    font-style:italic;
-    margin-bottom:18px;
-  }
-
-  .host-note{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:0.95rem;
-    color:var(--rose);
-    margin-top:6px;
-  }
-
-  .map-btn{
-    display:inline-block;
-    margin-top:18px;
-    padding:9px 24px;
-    border:1px solid var(--rose);
-    color:var(--rose-deep);
-    text-decoration:none;
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    letter-spacing:0.06em;
-    font-size:0.85rem;
-    border-radius:2px;
-    transition:background 0.3s ease, color 0.3s ease;
-  }
-  .map-btn:hover{ background:var(--rose); color:#fff; }
-
-  .compliments{
-    margin-top:28px;
-    padding-top:20px;
-    border-top:1px solid var(--line-soft);
-  }
-  .compliments .from{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:0.95rem;
-    color:var(--rose);
-    margin-bottom:4px;
-  }
-  .compliments .names{
-    font-size:0.9rem;
-    color:var(--ink-soft);
-  }
-
-  /* connecting divider between the two cards */
-  .between{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:14px;
-    margin:-30px auto 46px;
-    max-width:300px;
-    position:relative;
-    z-index:3;
-  }
-  .between .line{ flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--line), transparent); }
-
-  /* closing */
-  .closing{
-    text-align:center;
-    padding:10px 10px 20px;
-  }
-  .closing .blessing-ar{
-    font-family:'Amiri', serif;
-    font-size:1.05rem;
-    color:var(--rose-deep);
-    margin-bottom:14px;
-  }
-  .closing .blessing-en{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:1.1rem;
-    color:var(--ink-soft);
-    max-width:420px;
-    margin:0 auto 30px;
-  }
-  .contacts{
-    display:flex;
-    justify-content:center;
-    gap:44px;
-    flex-wrap:wrap;
-    font-size:0.85rem;
-    color:var(--ink-soft);
-  }
-  .contacts .who{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:600;
-    color:var(--rose-deep);
-    font-size:0.75rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    margin-bottom:6px;
-  }
-
-  footer{
-    text-align:center;
-    padding:20px;
-    font-size:0.7rem;
-    letter-spacing:0.08em;
-    color:var(--ink-soft);
-    opacity:0.7;
-  }
+  .i18n[lang-loading] { visibility: hidden; }
+  #lang-toggle {
+    position: fixed;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--gold);
+    background: var(--card);
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0 8px 24px -10px oklch(44% .145 15 / .4);
+    transition: background-color .2s, color .2s, transform .15s;
+  }
+  #lang-toggle:hover { background: var(--primary); color: var(--primary-foreground); }
+  #lang-toggle:active { transform: scale(0.96); }
+  .section-valima {
+    background-color: color-mix(in oklab, var(--rose-soft) 28%, var(--background));
+    border-color: var(--border);
+  }
+  .celebrations-heading { padding-top: 0.35rem; }
+  @media (min-width: 640px) { .celebrations-heading { padding-top: 0.5rem; } }
+  .view-location-spacer { height: 2.5rem; }
+  @media (min-width: 640px) { .view-location-spacer { height: 4rem; } }
 </style>
 </head>
 <body>
-
-<nav class="site-nav" id="siteNav">
-  <div class="nav-brand">
-    <svg viewBox="0 0 32 32"><use href="#heart"/></svg>
-    H &amp; I
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="#top">Home</a>
-    <a href="#nikkah">Nikkah</a>
-    <a href="#walima">Walima</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-
-<section class="hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="hero-vignette"></div>
-  <div class="petals" id="petals"></div>
-
-  <svg class="hero-silhouette" viewBox="0 0 240 260" preserveAspectRatio="xMidYMax meet"><use href="#couple-silhouette"/></svg>
-
-  <div class="hero-content">
-    <div class="hero-amp-top">&amp;</div>
-    <div class="hero-title">Hajira &amp; Ibrahim</div>
-    <div class="hero-rule-row"><div class="line"></div><span style="font-size:0.75rem;letter-spacing:0.2em;">INSHA'ALLAH</span><div class="line"></div></div>
-    <div class="hero-date">19 &amp; 26 September 2026</div>
-    <div class="hero-tagline">Request the honour of your presence</div>
-
-    <div class="countdown-caption">Counting down to the Nikkah</div>
-    <div class="countdown" id="countdown">
-      <div class="cell"><div class="num" id="cd-days">00</div><div class="lbl">Days</div></div>
-      <div class="cell"><div class="num" id="cd-hours">00</div><div class="lbl">Hrs</div></div>
-      <div class="cell"><div class="num" id="cd-mins">00</div><div class="lbl">Min</div></div>
-      <div class="cell"><div class="num" id="cd-secs">00</div><div class="lbl">Sec</div></div>
-    </div>
-
-    <a class="hero-cta" href="#nikkah">View Invitation</a>
-  </div>
-
-  <svg class="hero-bouquet" viewBox="0 0 300 140"><use href="#bouquet"/></svg>
-</section>
-
-<div class="wrap">
-
-  <!-- ===================== NIKKAH CARD ===================== -->
-  <div class="arch-card reveal" id="nikkah">
-    <svg class="floral-corner tl" viewBox="0 0 150 150"><use href="#floral"/></svg>
-    <svg class="floral-corner tr" viewBox="0 0 150 150"><use href="#floral"/></svg>
-    <svg class="floral-corner bl" viewBox="0 0 150 150"><use href="#floral"/></svg>
-    <svg class="floral-corner br" viewBox="0 0 150 150"><use href="#floral"/></svg>
-
-    <div class="arch-inner">
-      <div class="bismillah-ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-      <div class="bismillah-en">In the name of Allah, the most beneficent and the most merciful</div>
-      <div class="mini-rule"></div>
-
-      <svg class="medallion" viewBox="0 0 150 150"><use href="#rings"/></svg>
-
-      <div class="family-row">
-        <div class="fam">
-          <div class="label">Family of the bride</div>
-          <div class="name">Mr. A. Yahia Khan &amp;<br>Mrs. S. Humerah Khanam</div>
-        </div>
-        <div class="amp">&amp;</div>
-        <div class="fam">
-          <div class="label">Family of the groom</div>
-          <div class="name">(Late) Mr. A. Kursheed Ali &amp;<br>Mrs. S. Rahamathunnisa</div>
-        </div>
-      </div>
-
-      <div class="invite-line">Cordially solicit your esteemed presence at the</div>
-      <div class="ceremony-tag">Nikkah Ceremony</div>
-      <div class="of-children">of our daughter &amp; son</div>
-
-      <div class="couple-names">
-        Hajira
-        <svg class="heart-icon" viewBox="0 0 32 32"><use href="#heart"/></svg>
-        Ibrahim
-      </div>
-
-      <div class="date-row">
-        <div class="date-cell"><div class="top">Saturday</div></div>
-        <div class="date-cell mid">
-          <div class="day">19</div>
-          <div class="month">September</div>
-          <div class="year">2026</div>
-        </div>
-        <div class="date-cell"><div class="top">At 11.00 am</div></div>
-      </div>
-
-      <div class="venue-label">Venue</div>
-      <div class="venue-name">Faiz Mahal A/C, The Marriage Palace</div>
-      <div class="venue-addr">Hotel Imperial Complex, 14/3 Whannels Road,<br>Egmore, Chennai – 600 008</div>
-      <div class="landmark">Near Albert Theatre &middot; Egmore Railway Station</div>
-
-      <div class="host-note">Followed by lunch feast &middot; hosted by the bride's family</div>
-
-      <div><a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Faiz+Mahal+Hotel+Imperial+Complex+Whannels+Road+Egmore+Chennai" target="_blank" rel="noopener">View on Map</a></div>
-
-      <div class="compliments">
-        <div class="from">With best compliments from</div>
-        <div class="names">Elder Sister: Mrs. Dr. Y. Uzra Khanam &nbsp;·&nbsp; Brother-in-law: Er. S. Salauddin</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="between reveal"><div class="line"></div><svg width="18" height="18" viewBox="0 0 18 18"><use href="#spark"/></svg><div class="line"></div></div>
-
-  <!-- ===================== WALIMA CARD ===================== -->
-  <div class="arch-card reveal" id="walima">
-    <svg class="floral-corner tl" viewBox="0 0 150 150"><use href="#floral"/></svg>
-    <svg class="floral-corner tr" viewBox="0 0 150 150"><use href="#floral"/></svg>
-    <svg class="floral-corner bl" viewBox="0 0 150 150"><use href="#floral"/></svg>
-    <svg class="floral-corner br" viewBox="0 0 150 150"><use href="#floral"/></svg>
-
-    <div class="arch-inner">
-      <div class="bismillah-ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-      <div class="bismillah-en">In the name of Allah, the most beneficent and the most merciful</div>
-      <div class="mini-rule"></div>
-
-      <svg class="medallion" viewBox="0 0 150 150"><use href="#rings"/></svg>
-
-      <div class="invite-line">You are cordially invited to the</div>
-      <div class="ceremony-tag">Walima Reception</div>
-      <div class="of-children">celebrating the marriage of</div>
-
-      <div class="couple-names">
-        Hajira
-        <svg class="heart-icon" viewBox="0 0 32 32"><use href="#heart"/></svg>
-        Ibrahim
-      </div>
-
-      <div class="date-row">
-        <div class="date-cell"><div class="top">Saturday</div></div>
-        <div class="date-cell mid">
-          <div class="day">26</div>
-          <div class="month">September</div>
-          <div class="year">2026</div>
-        </div>
-        <div class="date-cell"><div class="top">Trichy</div></div>
-      </div>
-
-      <div class="venue-label">Venue</div>
-      <div class="venue-name">Sidharth Mahal</div>
-      <div class="venue-addr">Trichy</div>
-
-      <div class="host-note">Hosted by the groom's family</div>
-
-      <div><a class="map-btn" href="https://maps.app.goo.gl/frJMYLNqt94vt7R37?g_st=ic" target="_blank" rel="noopener">View on Map</a></div>
-
-      <div class="compliments">
-        <div class="from">With best compliments from</div>
-        <div class="names">Er. K. Mohammad Ibrahim &amp; Family</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== CLOSING ===================== -->
-  <div class="closing reveal" id="contact">
-    <div class="blessing-ar">بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
-    <div class="blessing-en">"May Allah bless you, and shower His blessings upon you, and join you together in goodness." — Aameen</div>
-    <div class="contacts">
-      <div><div class="who">Chennai Contact</div>A. Yahia Khan &amp; S. Humerah Khanam<br>+91 73394 17838 &middot; +91 98416 25044</div>
-    </div>
-  </div>
-
-</div>
-
-<footer>With love, from both our families &middot; Insha'Allah</footer>
-
-<!-- ============ reusable SVG artwork ============ -->
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-
-    <!-- heart -->
-    <symbol id="heart" viewBox="0 0 32 32">
-      <path d="M16 28 C16 28 3 19.5 3 11.5 C3 6.8 6.6 4 10.4 4 C13 4 15 5.4 16 7.3 C17 5.4 19 4 21.6 4 C25.4 4 29 6.8 29 11.5 C29 19.5 16 28 16 28 Z" fill="#B54B5B"/>
-    </symbol>
-
-    <!-- sparkle -->
-    <symbol id="spark" viewBox="0 0 18 18">
-      <path d="M9 0 L10.6 7.4 L18 9 L10.6 10.6 L9 18 L7.4 10.6 L0 9 L7.4 7.4 Z" fill="#CBA45C"/>
-    </symbol>
-
-    <!-- interlocking rings with a small floral wreath, hand-drawn line style -->
-    <symbol id="rings" viewBox="0 0 150 150">
-      <circle cx="75" cy="75" r="66" fill="none" stroke="#E7CFCF" stroke-width="1"/>
-      <circle cx="63" cy="82" r="26" fill="none" stroke="#CBA45C" stroke-width="4"/>
-      <circle cx="63" cy="82" r="26" fill="none" stroke="#B54B5B" stroke-width="1" opacity="0.5"/>
-      <circle cx="90" cy="82" r="26" fill="none" stroke="#CBA45C" stroke-width="4"/>
-      <circle cx="90" cy="82" r="26" fill="none" stroke="#8E3A47" stroke-width="1" opacity="0.4"/>
-      <!-- small gems on one ring -->
-      <circle cx="76" cy="58" r="2" fill="#B54B5B"/>
-      <circle cx="82" cy="59.5" r="2" fill="#B54B5B"/>
-      <circle cx="88" cy="62" r="2" fill="#B54B5B"/>
-      <!-- wreath: leaves -->
-      <g fill="#8A9A72">
-        <path d="M40 46 C34 40 34 30 42 24 C46 33 44 42 40 46 Z"/>
-        <path d="M110 46 C116 40 116 30 108 24 C104 33 106 42 110 46 Z"/>
-        <path d="M30 62 C22 58 18 49 24 40 C31 46 32 55 30 62 Z"/>
-        <path d="M120 62 C128 58 132 49 126 40 C119 46 118 55 120 62 Z"/>
-      </g>
-      <!-- small blush blooms -->
-      <g>
-        <circle cx="42" cy="30" r="7" fill="#F3D3D6"/>
-        <circle cx="37" cy="34" r="5" fill="#EFC0C4"/>
-        <circle cx="108" cy="30" r="7" fill="#F3D3D6"/>
-        <circle cx="113" cy="34" r="5" fill="#EFC0C4"/>
-        <circle cx="75" cy="20" r="6" fill="#EFC0C4"/>
-      </g>
-    </symbol>
-
-    <!-- couple silhouette embracing, against the hero sunset -->
-    <symbol id="couple-silhouette" viewBox="0 0 240 260">
-      <!-- soft ground shadow -->
-      <ellipse cx="120" cy="256" rx="90" ry="6" fill="rgba(0,0,0,0.18)"/>
-      <!-- groom -->
-      <path d="M96 260 L96 190 C96 170 100 150 92 138 C86 129 86 116 96 108 C104 101 118 101 125 109 C133 117 132 129 126 138 C119 149 122 168 126 188 L128 260 Z" fill="#2a1620"/>
-      <circle cx="109" cy="94" r="15" fill="#2a1620"/>
-      <!-- bride -->
-      <path d="M118 260 C110 210 108 175 120 150 C110 140 106 122 116 108 C123 98 139 98 147 108 C157 122 152 141 141 150 C154 168 168 200 176 260 Z" fill="#3a2230"/>
-      <circle cx="132" cy="93" r="14" fill="#3a2230"/>
-      <!-- veil flow -->
-      <path d="M150 112 C176 128 190 168 182 220 C178 245 168 258 158 260 L176 260 C190 230 194 178 176 138 C168 122 158 112 150 112 Z" fill="#3a2230" opacity="0.85"/>
-      <!-- rim light -->
-      <path d="M126 108 C132 101 141 101 147 108" stroke="#f3d9a8" stroke-width="1.5" fill="none" opacity="0.55"/>
-      <path d="M96 108 C102 101 111 101 116 108" stroke="#f3d9a8" stroke-width="1.5" fill="none" opacity="0.4"/>
-    </symbol>
-
-    <!-- bouquet: cluster of roses + leaves, wide format for hero base -->
-    <symbol id="bouquet" viewBox="0 0 300 140">
-      <g opacity="0.5">
-        <path d="M0 90 C40 60 70 100 60 130" fill="none" stroke="#8A9A72" stroke-width="4" stroke-linecap="round"/>
-        <path d="M300 90 C260 60 230 100 240 130" fill="none" stroke="#8A9A72" stroke-width="4" stroke-linecap="round"/>
-      </g>
-      <g>
-        <circle cx="55" cy="70" r="26" fill="#F3D3D6"/>
-        <circle cx="55" cy="70" r="16" fill="#E4A6AC"/>
-        <circle cx="55" cy="70" r="7" fill="#C97B84"/>
-      </g>
-      <g>
-        <circle cx="105" cy="50" r="19" fill="#FBEEE7"/>
-        <circle cx="105" cy="50" r="10" fill="#F3D3D6"/>
-      </g>
-      <g>
-        <circle cx="150" cy="60" r="23" fill="#E4A6AC"/>
-        <circle cx="150" cy="60" r="12" fill="#B54B5B"/>
-      </g>
-      <g>
-        <circle cx="196" cy="48" r="18" fill="#F3D3D6"/>
-        <circle cx="196" cy="48" r="9" fill="#EFC0C4"/>
-      </g>
-      <g>
-        <circle cx="242" cy="68" r="24" fill="#F3D3D6"/>
-        <circle cx="242" cy="68" r="14" fill="#E4A6AC"/>
-        <circle cx="242" cy="68" r="6" fill="#C97B84"/>
-      </g>
-      <g fill="#5F7150" opacity="0.85">
-        <path d="M78 92 C68 84 68 70 80 64 C86 74 84 86 78 92 Z"/>
-        <path d="M126 90 C116 82 116 68 128 62 C134 72 132 84 126 90 Z"/>
-        <path d="M172 90 C162 82 162 68 174 62 C180 72 178 84 172 90 Z"/>
-        <path d="M218 92 C208 84 208 70 220 64 C226 74 224 86 218 92 Z"/>
-      </g>
-      <circle cx="30" cy="100" r="3" fill="#CBA45C" opacity="0.8"/>
-      <circle cx="268" cy="100" r="3" fill="#CBA45C" opacity="0.8"/>
-    </symbol>
-
-    <!-- stylised floral corner: roses + leaves, flat line-art style -->
-    <symbol id="floral" viewBox="0 0 150 150">
-      <!-- leaves / vines -->
-      <path d="M0 30 C30 20 40 45 25 70 C55 55 65 80 50 105" fill="none" stroke="#8A9A72" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-      <path d="M8 8 C40 12 55 35 45 60" fill="none" stroke="#5F7150" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
-      <g fill="#8A9A72" opacity="0.85">
-        <path d="M22 20 C14 14 14 4 24 0 C28 8 26 16 22 20 Z"/>
-        <path d="M46 55 C38 50 38 41 47 36 C51 44 50 51 46 55 Z"/>
-        <path d="M8 55 C2 49 3 40 12 37 C15 45 13 51 8 55 Z"/>
-      </g>
-      <!-- roses: layered circles for a soft bloom -->
-      <g>
-        <circle cx="26" cy="26" r="17" fill="#F3D3D6"/>
-        <circle cx="26" cy="26" r="11" fill="#EFC0C4"/>
-        <circle cx="26" cy="26" r="5.5" fill="#E4A6AC"/>
-      </g>
-      <g>
-        <circle cx="6" cy="8" r="11" fill="#FBEEE7"/>
-        <circle cx="6" cy="8" r="6" fill="#F3D3D6"/>
-      </g>
-      <g>
-        <circle cx="58" cy="42" r="9" fill="#F3D3D6"/>
-        <circle cx="58" cy="42" r="4.5" fill="#E4A6AC"/>
-      </g>
-      <circle cx="14" cy="46" r="3.5" fill="#CBA45C" opacity="0.7"/>
-      <circle cx="40" cy="10" r="3" fill="#CBA45C" opacity="0.7"/>
-    </symbol>
-
-  </defs>
-</svg>
-
+<!-- Swordfish: haha, you really came this far? 👀 -->
+<button id="lang-toggle" type="button" aria-label="Switch language"><span aria-hidden="true">🌐</span><span id="lang-toggle-label">தமிழ்</span></button>
+<main class="bg-background min-h-screen"><div class="petal-layer" aria-hidden="true"><span class="petal" style="left: 4%; width: 18px; height: 18px; color: var(--rose-soft); animation-delay: 0s; animation-duration: 13s; --sway: 40px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 12%; width: 12px; height: 12px; color: var(--rose); animation-delay: -5s; animation-duration: 17s; --sway: -30px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 21%; width: 22px; height: 22px; color: var(--rose-soft); animation-delay: -9s; animation-duration: 15s; --sway: 55px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 29%; width: 14px; height: 14px; color: var(--gold-soft); animation-delay: -2s; animation-duration: 19s; --sway: -45px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 38%; width: 20px; height: 20px; color: var(--rose-soft); animation-delay: -12s; animation-duration: 14s; --sway: 35px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 46%; width: 11px; height: 11px; color: var(--rose); animation-delay: -7s; animation-duration: 21s; --sway: -55px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 55%; width: 24px; height: 24px; color: var(--rose-soft); animation-delay: -3s; animation-duration: 16s; --sway: 45px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 63%; width: 13px; height: 13px; color: var(--gold-soft); animation-delay: -11s; animation-duration: 18s; --sway: -35px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 71%; width: 19px; height: 19px; color: var(--rose-soft); animation-delay: -6s; animation-duration: 15s; --sway: 50px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 80%; width: 15px; height: 15px; color: var(--rose); animation-delay: -14s; animation-duration: 20s; --sway: -40px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 88%; width: 21px; height: 21px; color: var(--rose-soft); animation-delay: -1s; animation-duration: 17s; --sway: 30px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span><span class="petal" style="left: 95%; width: 12px; height: 12px; color: var(--gold-soft); animation-delay: -8s; animation-duration: 14s; --sway: -50px;"><svg viewBox="0 0 24 24" fill="currentColor" class="h-full w-full"><path d="M12 1c5.4 3.1 8.5 7 8.5 11.3 0 5.2-3.9 8.7-8.5 10.7-4.6-2-8.5-5.5-8.5-10.7C3.5 8 6.6 4.1 12 1z"></path></svg></span></div><section class="relative isolate overflow-hidden"><img src="assets/floral-frame.jpg" alt="Watercolor blush rose border" width="1024" height="1536" class="absolute inset-0 -z-10 h-full w-full object-cover"><div class="bg-background/45 absolute inset-0 -z-10"></div><div class="mx-auto flex min-h-[100svh] max-w-2xl flex-col items-center justify-center px-8 py-24 text-center"><div class="arch-frame border-gold/70 w-full max-w-md px-6 pt-14 pb-10"><p dir="rtl" lang="ar" class="text-gold rise text-3xl leading-loose">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</p><p class="text-foreground/70 mt-4 text-[0.65rem] leading-relaxed tracking-[0.2em] uppercase"><span class="i18n" data-en="In the name of Allah, the most merciful and the most beneficent" data-ta="அல்லாஹ்வின் திருப்பெயரால், மிகவும் கருணையுள்ளவன் மற்றும் மிகவும் அன்புடையவன்">In the name of Allah, the most merciful and the most beneficent</span></p></div><p class="label-caps text-foreground/70 mt-12"><span class="i18n" data-en="Request the pleasure of your presence" data-ta="உங்கள் வருகையை அன்புடன் வேண்டுகிறோம்">Request the pleasure of your presence</span></p><p class="font-display text-rose mt-3 text-lg tracking-[0.3em] uppercase"><span class="i18n" data-en="Nikkah &amp; Valima" data-ta="நிக்காஹ் &amp; வலீமா">Nikkah &amp; Valima</span></p><h1 class="font-script text-primary rise mt-6 text-6xl leading-[1.15] sm:text-7xl"><span class="i18n" data-en="Ibrahim" data-ta="இப்ராஹீம்">Ibrahim</span><span class="text-gold mx-3">&amp;</span><span class="i18n" data-en="Hajira" data-ta="ஹஜிரா">Hajira</span></h1><div class="my-10 w-full max-w-sm"><div class="mx-auto flex w-full max-w-xs items-center gap-3"><span class="deco-rule flex-1"></span><span class="text-gold text-xs">✿</span><span class="deco-rule flex-1"></span></div></div><p class="font-display text-foreground/80 text-xl tracking-[0.2em] uppercase"><span class="i18n" data-en="19 &amp; 26 September 2026" data-ta="19 &amp; 26 செப்டம்பர் 2026">19 &amp; 26 September 2026</span></p><p class="font-script text-rose mt-4 text-3xl"><span class="i18n" data-en="Two cities, one union" data-ta="இரு நகரங்கள், ஒரே பிணைப்பு">Two cities, one union</span></p></div></section><section class="relative mx-auto max-w-3xl px-6 py-20 text-center sm:py-28"><p dir="rtl" lang="ar" class="text-primary text-2xl leading-loose sm:text-3xl">بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p><div class="my-8"><div class="mx-auto flex w-full max-w-xs items-center gap-3"><span class="deco-rule flex-1"></span><span class="text-gold text-xs">❖</span><span class="deco-rule flex-1"></span></div></div><p class="font-display text-foreground/85 text-xl leading-relaxed italic sm:text-2xl"><span class="i18n" data-en="“May Allah bless you, and shower His blessings upon you, and join you together in goodness.”" data-ta="“அல்லாஹ் உங்களை ஆசீர்வதிப்பானாக, தன் அருளை உங்கள் மேல் பொழிவானாக, நன்மையில் உங்கள் இருவரையும் இணைப்பானாக.”">“May Allah bless you, and shower His blessings upon you, and join you together in goodness.”</span></p><p class="text-muted-foreground mt-3 text-sm tracking-[0.2em] uppercase"><span class="i18n" data-en="— Aameen" data-ta="— ஆமீன்">— Aameen</span></p></section><section class="bg-secondary/70 border-y"><div class="mx-auto max-w-4xl px-6 py-20 text-center sm:py-24"><div class="grid items-center gap-8 sm:grid-cols-[1fr_auto_1fr]"><p class="font-display text-primary text-2xl"><span class="i18n" data-en="(Marhoom) Mr. A. Kursheed Ali" data-ta="(மர்ஹூம்) திரு. ஏ. குர்ஷீத் அலி">(Marhoom) Mr. A. Kursheed Ali</span><br><span class="text-foreground/70 text-lg"><span class="i18n" data-en="Family" data-ta="குடும்பம்">Family</span></span></p><span class="font-script text-gold text-5xl">&amp;</span><p class="font-display text-primary text-2xl"><span class="i18n" data-en="Mr. A. Yahia Khan" data-ta="திரு. ஏ. யாஹியா கான்">Mr. A. Yahia Khan</span><br><span class="text-foreground/70 text-lg"><span class="i18n" data-en="Family" data-ta="குடும்பம்">Family</span></span></p></div><p class="label-caps text-foreground/70 mt-10"><span class="i18n" data-en="Request the pleasure of your presence at the" data-ta="தங்களை அன்புடன் அழைக்கிறோம்">Request the pleasure of your presence at the</span></p><p class="font-display text-rose mt-3 text-2xl tracking-[0.2em] uppercase"><span class="i18n" data-en="Nikkah Ceremony" data-ta="நிக்காஹ் விழா">Nikkah Ceremony</span></p><p class="label-caps text-foreground/70 mt-3"><span class="i18n" data-en="of our children" data-ta="எங்கள் பிள்ளைகளின்">of our children</span></p></div></section><section class="mx-auto grid max-w-5xl gap-12 px-6 py-20 sm:py-24 md:grid-cols-[1fr_auto_1fr] md:items-center"><div class="text-center md:text-right"><h2 class="font-script text-primary text-5xl"><span class="i18n" data-en="Ibrahim" data-ta="இப்ராஹீம்">Ibrahim</span></h2><p class="font-display text-foreground mt-2 text-xl">Er. K. Mohammad Ibrahim, B.E.</p><p class="text-muted-foreground text-xs tracking-[0.2em] uppercase"><span class="i18n" data-en="Automation Engineer, K.S.A." data-ta="ஆட்டோமேஷன் பொறியாளர், சவூதி அரேபியா">Automation Engineer, K.S.A.</span></p><p class="text-foreground/80 mt-4 text-sm leading-relaxed"><span class="i18n" data-en="S/o (Marhoom) Mr. A. Kursheed Ali &amp; Mrs. S. Rahamathunnisa" data-ta="மகன் (மர்ஹூம்) திரு. ஏ. குர்ஷீத் அலி &amp; திருமதி. எஸ். ரஹ்மத்துன்னிசா">S/o (Marhoom) Mr. A. Kursheed Ali &amp; Mrs. S. Rahamathunnisa</span></p><p class="text-muted-foreground mt-3 text-xs leading-relaxed"><span class="i18n" data-en="Paternal G.S/o (Marhoom) Janab Ahmed Ali &amp; (Marhoom) Nazani Begum, Maternal G.S/o (Marhoom) Janab Shaffee &amp; (Marhoom) Noorunnisa Begum" data-ta="தந்தை வழிப் பேரன் (மர்ஹூம்) ஜனாப் அஹமத் அலி &amp; (மர்ஹூம்) நசானி பேகம், தாய் வழிப் பேரன் (மர்ஹூம்) ஜனாப் ஷாஃபி &amp; (மர்ஹூம்) நூருன்னிசா பேகம்">Paternal G.S/o (Marhoom) Janab Ahmed Ali &amp; (Marhoom) Nazani Begum, Maternal G.S/o (Marhoom) Janab Shaffee &amp; (Marhoom) Noorunnisa Begum</span></p></div><div class="font-script text-gold text-center text-5xl"><span class="i18n" data-en="weds" data-ta="திருமணம்">weds</span></div><div class="text-center md:text-left"><h2 class="font-script text-primary text-5xl"><span class="i18n" data-en="Hajira" data-ta="ஹஜிரா">Hajira</span></h2><p class="font-display text-foreground mt-2 text-xl">Y. Hajira Khanam, M.Com.</p><p class="text-foreground/80 mt-4 text-sm leading-relaxed"><span class="i18n" data-en="D/o Mr. A. Yahia Khan (Sr. Safety Manager, L&amp;T, Chennai) &amp; Mrs. S. Humerah Khanam" data-ta="மகள் திரு. ஏ. யாஹியா கான் (மூத்த பாதுகாப்பு மேலாளர், எல்&amp;டி, சென்னை) &amp; திருமதி. எஸ். ஹுமேரா கானம்">D/o Mr. A. Yahia Khan (Sr. Safety Manager, L&amp;T, Chennai) &amp; Mrs. S. Humerah Khanam</span></p><p class="text-muted-foreground mt-3 text-xs leading-relaxed"><span class="i18n" data-en="Paternal G.D/o (Marhoom) Haji H. Amir Khan &amp; (Marhoom) Haji A. Khursheed Begam, Maternal G.D/o (Marhoom) F.A.R.K. Shadi Khan &amp; (Marhoom) A. Zubeida Khanam" data-ta="தந்தை வழிப் பேத்தி (மர்ஹூம்) ஹாஜி எச். அமீர் கான் &amp; (மர்ஹூம்) ஹாஜி ஏ. குர்ஷீத் பேகம், தாய் வழிப் பேத்தி (மர்ஹூம்) எஃப்.ஏ.ஆர்.கே. ஷாதி கான் &amp; (மர்ஹூம்) ஏ. ஜுபைதா கானம்">Paternal G.D/o (Marhoom) Haji H. Amir Khan &amp; (Marhoom) Haji A. Khursheed Begam, Maternal G.D/o (Marhoom) F.A.R.K. Shadi Khan &amp; (Marhoom) A. Zubeida Khanam</span></p></div></section><section id="nikkah" class="bg-secondary/70 border-y min-h-[100svh] flex items-center"><div class="relative w-full py-16 sm:py-20"><article class="relative overflow-hidden text-center w-full"><img src="assets/floral-corner.png" alt="" aria-hidden="true" loading="lazy" width="1024" height="1024" class="pointer-events-none absolute -top-8 -right-10 w-28 opacity-45"><div class="text-center mb-10 celebrations-heading"><p class="label-caps text-gold"><span class="i18n" data-en="The Celebrations" data-ta="விழாக்கள்">The Celebrations</span></p><h2 class="font-script text-primary mt-3 text-5xl"><span class="i18n" data-en="Two cities, one union" data-ta="இரு நகரங்கள், ஒரே பிணைப்பு">Two cities, one union</span></h2></div><p class="label-caps text-gold"><span class="i18n" data-en="Chennai" data-ta="சென்னை">Chennai</span></p><h3 class="font-script text-primary mt-3 text-4xl sm:text-5xl"><span class="i18n" data-en="Nikkah" data-ta="நிக்காஹ்">Nikkah</span></h3><div class="my-7"><div class="mx-auto flex w-full max-w-xs items-center gap-3"><span class="deco-rule flex-1"></span><span class="text-gold text-xs">✦</span><span class="deco-rule flex-1"></span></div></div><div class="text-foreground/85 flex items-stretch justify-center gap-4 sm:gap-6"><div class="font-display self-center text-lg tracking-[0.25em] uppercase sm:text-xl"><span class="i18n" data-en="Saturday" data-ta="சனிக்கிழமை">Saturday</span></div><span class="bg-gold-soft w-px"></span><div class="text-center"><div class="font-display text-sm tracking-[0.25em] uppercase"><span class="i18n" data-en="Sep" data-ta="செப்">Sep</span></div><div class="font-display text-primary text-5xl leading-none sm:text-6xl">19</div><div class="font-display text-sm tracking-[0.2em]">2026</div></div><span class="bg-gold-soft w-px"></span><div class="font-display self-center text-lg tracking-[0.15em] uppercase sm:text-xl"><span class="i18n" data-en="11.00 AM" data-ta="காலை 11.00">11.00 AM</span></div></div><p class="text-muted-foreground mt-5 text-sm"><span class="i18n" data-en="Rabiul Aakhir 7 · 1448 — from 11.00 a.m. onwards, followed by Lunch Feast" data-ta="ரபீவுல் ஆகிர் 7 · 1448 — காலை 11.00 மணி முதல், மதிய விருந்து தொடரும்">Rabiul Aakhir 7 · 1448 — from 11.00 a.m. onwards, followed by Lunch Feast</span></p><p class="label-caps text-rose mt-8"><span class="i18n" data-en="Venue" data-ta="இடம்">Venue</span></p><p class="font-display text-primary mt-2 text-2xl"><span class="i18n" data-en="Faiz Mahal A/C, The Marriage Palace" data-ta="பைஸ் மஹால் ஏ/சி, த மேரேஜ் பேலஸ்">Faiz Mahal A/C, The Marriage Palace</span></p><p class="text-muted-foreground mt-2 text-sm leading-relaxed"><span class="i18n" data-en="Hotel Imperial Complex, 14/3, Whannels Road, Egmore, Chennai - 600 008" data-ta="ஹோட்டல் இம்பீரியல் காம்ப்ளக்ஸ், 14/3, வென்னல்ஸ் சாலை, எழும்பூர், சென்னை - 600 008">Hotel Imperial Complex, 14/3, Whannels Road, Egmore, Chennai - 600 008</span></p><p class="text-muted-foreground mt-2 text-xs italic"><span class="i18n" data-en="Near Albert Theatre · Landmark: Egmore Railway Station" data-ta="ஆல்பர்ட் தியேட்டர் அருகில் · அடையாளம்: எக்மோர் ரயில் நிலையம்">Near Albert Theatre · Landmark: Egmore Railway Station</span></p><a href="https://www.google.com/maps/search/?api=1&amp;query=Faiz+Mahal+Hotel+Imperial+Complex+Whannels+Road+Egmore+Chennai+600008" target="_blank" rel="noopener noreferrer" class="border-gold text-primary hover:bg-primary hover:text-primary-foreground mt-8 inline-flex items-center gap-2 rounded-sm border px-6 py-3 text-xs tracking-[0.22em] uppercase transition-colors"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M12 2C7.86 2 4.5 5.36 4.5 9.5c0 5.25 6.29 11.53 6.56 11.79a1.25 1.25 0 0 0 1.88 0C13.21 21.03 19.5 14.75 19.5 9.5 19.5 5.36 16.14 2 12 2zm0 10.25a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg><span class="i18n" data-en="View location" data-ta="இடத்தைக் காண">View location</span></a><div class="view-location-spacer"></div></article></div></section><section id="valima" class="section-valima border-b min-h-[100svh] flex items-center"><div class="relative w-full py-16 sm:py-20"><article class="relative overflow-hidden text-center w-full"><img src="assets/floral-corner.png" alt="" aria-hidden="true" loading="lazy" width="1024" height="1024" class="pointer-events-none absolute -top-8 -right-10 w-28 opacity-45"><p class="label-caps text-gold"><span class="i18n" data-en="Trichy" data-ta="திருச்சி">Trichy</span></p><h3 class="font-script text-primary mt-3 text-4xl sm:text-5xl"><span class="i18n" data-en="Valima" data-ta="வலீமா">Valima</span></h3><div class="my-7"><div class="mx-auto flex w-full max-w-xs items-center gap-3"><span class="deco-rule flex-1"></span><span class="text-gold text-xs">✦</span><span class="deco-rule flex-1"></span></div></div><div class="text-foreground/85 flex items-stretch justify-center gap-4 sm:gap-6"><div class="font-display self-center text-lg tracking-[0.25em] uppercase sm:text-xl"><span class="i18n" data-en="Saturday" data-ta="சனிக்கிழமை">Saturday</span></div><span class="bg-gold-soft w-px"></span><div class="text-center"><div class="font-display text-sm tracking-[0.25em] uppercase"><span class="i18n" data-en="Sep" data-ta="செப்">Sep</span></div><div class="font-display text-primary text-5xl leading-none sm:text-6xl">26</div><div class="font-display text-sm tracking-[0.2em]">2026</div></div><span class="bg-gold-soft w-px"></span><div class="font-display self-center text-lg tracking-[0.15em] uppercase sm:text-xl"><span class="i18n" data-en="Evening" data-ta="மாலை">Evening</span></div></div><p class="text-muted-foreground mt-5 text-sm"><span class="i18n" data-en="Reception &amp; dinner — hosted by the groom's family" data-ta="வரவேற்பு &amp; இரவு விருந்து — மணமகன் குடும்பத்தினரால்">Reception &amp; dinner — hosted by the groom's family</span></p><p class="label-caps text-rose mt-8"><span class="i18n" data-en="Venue" data-ta="இடம்">Venue</span></p><p class="font-display text-primary mt-2 text-2xl"><span class="i18n" data-en="Siddharth Grand Mahal" data-ta="சித்தார்த் கிராண்ட் மஹால்">Siddharth Grand Mahal</span></p><p class="text-muted-foreground mt-2 text-sm leading-relaxed"><span class="i18n" data-en="D.No. 41/2, Opposite Royal Vesta Apartments, M.M. Nagar, Uyyakondan Thirumalai, Vayalur Road, Tiruchirappalli – 620 102" data-ta="கதவு எண். 41/2, ராயல் வெஸ்டா அபார்ட்மென்ட்ஸ் எதிரில், எம்.எம். நகர், உய்யக்கொண்டான் திருமலை, வயலூர் சாலை, திருச்சிராப்பள்ளி – 620 102">D.No. 41/2, Opposite Royal Vesta Apartments, M.M. Nagar, Uyyakondan Thirumalai, Vayalur Road, Tiruchirappalli – 620 102</span></p><a href="https://maps.app.goo.gl/frJMYLNqt94vt7R37?g_st=ic" target="_blank" rel="noopener noreferrer" class="border-gold text-primary hover:bg-primary hover:text-primary-foreground mt-8 inline-flex items-center gap-2 rounded-sm border px-6 py-3 text-xs tracking-[0.22em] uppercase transition-colors"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="flex-shrink:0"><path d="M12 2C7.86 2 4.5 5.36 4.5 9.5c0 5.25 6.29 11.53 6.56 11.79a1.25 1.25 0 0 0 1.88 0C13.21 21.03 19.5 14.75 19.5 9.5 19.5 5.36 16.14 2 12 2zm0 10.25a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"></path></svg><span class="i18n" data-en="View location" data-ta="இடத்தைக் காண">View location</span></a><div class="view-location-spacer"></div></article></div></section><section class="mx-auto max-w-3xl px-6 py-20 text-center sm:py-24"><p class="label-caps text-gold"><span id="countdown-label" class="i18n" data-en="Counting down to the Nikkah" data-ta="நிக்காஹ்-க்கான எண்ணிக்கை">Counting down to the Nikkah</span></p><div class="mt-8"><div class="flex justify-center gap-3 sm:gap-6"><div class="card-paper w-18 rounded-sm px-3 py-4 sm:w-24"><div id="cd-days" class="font-display text-primary text-3xl leading-none sm:text-4xl">00</div><div class="label-caps mt-2 text-[0.55rem] sm:text-[0.6rem]"><span class="i18n" data-en="Days" data-ta="நாட்கள்">Days</span></div></div><div class="card-paper w-18 rounded-sm px-3 py-4 sm:w-24"><div id="cd-hours" class="font-display text-primary text-3xl leading-none sm:text-4xl">00</div><div class="label-caps mt-2 text-[0.55rem] sm:text-[0.6rem]"><span class="i18n" data-en="Hours" data-ta="மணி">Hours</span></div></div><div class="card-paper w-18 rounded-sm px-3 py-4 sm:w-24"><div id="cd-mins" class="font-display text-primary text-3xl leading-none sm:text-4xl">00</div><div class="label-caps mt-2 text-[0.55rem] sm:text-[0.6rem]"><span class="i18n" data-en="Minutes" data-ta="நிமிடங்கள்">Minutes</span></div></div><div class="card-paper w-18 rounded-sm px-3 py-4 sm:w-24"><div id="cd-secs" class="font-display text-primary text-3xl leading-none sm:text-4xl">00</div><div class="label-caps mt-2 text-[0.55rem] sm:text-[0.6rem]"><span class="i18n" data-en="Seconds" data-ta="வினாடிகள்">Seconds</span></div></div></div></div></section><section id="rsvp" class="bg-secondary/70 border-y"><div class="relative mx-auto max-w-3xl px-6 py-20 sm:py-24"><div class="text-center"><p class="label-caps text-gold"><span class="i18n" data-en="Kindly respond" data-ta="தயவுசெய்து பதிலளிக்கவும்">Kindly respond</span></p><h2 class="font-script text-primary mt-3 text-5xl">RSVP</h2><div class="my-7"><div class="mx-auto flex w-full max-w-xs items-center gap-3"><span class="deco-rule flex-1"></span><span class="text-gold text-xs">✿</span><span class="deco-rule flex-1"></span></div></div><p class="text-foreground/80 mx-auto max-w-md text-sm leading-relaxed"><span class="i18n" data-en="Your presence would complete our joy. Please let us know which of the two functions you will be joining, and how many will accompany you." data-ta="உங்கள் வருகை எங்கள் மகிழ்ச்சியை முழுமையாக்கும். எந்த விழாவில் கலந்துகொள்வீர்கள் என்றும், எத்தனை பேர் வருவீர்கள் என்றும் தெரிவிக்கவும்.">Your presence would complete our joy. Please let us know which of the two functions you will be joining, and how many will accompany you.</span></p></div><div class="mt-12"><form id="rsvp-form" class="card-paper rounded-sm px-7 py-10 sm:px-10" novalidate=""><div class="grid gap-6 sm:grid-cols-2"><div class="sm:col-span-2"><label for="rsvp-name" class="label-caps"><span class="i18n" data-en="Your name" data-ta="உங்கள் பெயர்">Your name</span></label><input id="rsvp-name" maxlength="100" class="border-input bg-card text-foreground focus:border-gold focus:ring-gold/40 w-full rounded-sm border px-4 py-3 text-sm outline-none focus:ring-2 mt-2" placeholder="Full name" data-en-ph="Full name" data-ta-ph="முழுப் பெயர்" value=""></div><div><label for="rsvp-phone" class="label-caps"><span class="i18n" data-en="Phone (optional)" data-ta="தொலைபேசி (விருப்பம்)">Phone (optional)</span></label><input id="rsvp-phone" maxlength="30" inputmode="tel" class="border-input bg-card text-foreground focus:border-gold focus:ring-gold/40 w-full rounded-sm border px-4 py-3 text-sm outline-none focus:ring-2 mt-2" placeholder="+91 ..." data-en-ph="+91 ..." data-ta-ph="+91 ..." value=""></div><div><label for="rsvp-guests" class="label-caps"><span class="i18n" data-en="Number of guests" data-ta="விருந்தினர்கள் எண்ணிக்கை">Number of guests</span></label><input id="rsvp-guests" type="number" min="1" max="20" class="border-input bg-card text-foreground focus:border-gold focus:ring-gold/40 w-full rounded-sm border px-4 py-3 text-sm outline-none focus:ring-2 mt-2" value="1"></div><fieldset class="sm:col-span-2"><legend class="label-caps"><span class="i18n" data-en="Which functions will you attend?" data-ta="எந்த விழாக்களில் கலந்துகொள்வீர்கள்?">Which functions will you attend?</span></legend><div class="mt-3 grid gap-3 sm:grid-cols-2"><label for="rsvp-nikkah" class="flex cursor-pointer items-start gap-3 rounded-sm border px-4 py-4 transition-colors border-gold bg-secondary/70"><input id="rsvp-nikkah" type="checkbox" class="accent-rose mt-1 h-4 w-4" checked=""><span><span class="font-display text-primary block text-lg"><span class="i18n" data-en="Nikkah — Chennai" data-ta="நிக்காஹ் — சென்னை">Nikkah — Chennai</span></span><span class="text-muted-foreground block text-xs"><span class="i18n" data-en="Sat, 19 Sep 2026 · 11.00 AM" data-ta="சனி, 19 செப் 2026 · காலை 11.00">Sat, 19 Sep 2026 · 11.00 AM</span></span></span></label><label for="rsvp-valima" class="flex cursor-pointer items-start gap-3 rounded-sm border px-4 py-4 transition-colors border-gold bg-secondary/70"><input id="rsvp-valima" type="checkbox" class="accent-rose mt-1 h-4 w-4" checked=""><span><span class="font-display text-primary block text-lg"><span class="i18n" data-en="Valima — Trichy" data-ta="வலீமா — திருச்சி">Valima — Trichy</span></span><span class="text-muted-foreground block text-xs"><span class="i18n" data-en="Sat, 26 Sep 2026 · Evening" data-ta="சனி, 26 செப் 2026 · மாலை">Sat, 26 Sep 2026 · Evening</span></span></span></label></div></fieldset><div class="sm:col-span-2"><label for="rsvp-message" class="label-caps"><span class="i18n" data-en="A note for the couple (optional)" data-ta="மணமக்களுக்கு ஒரு குறிப்பு (விருப்பம்)">A note for the couple (optional)</span></label><textarea id="rsvp-message" maxlength="500" rows="3" class="border-input bg-card text-foreground focus:border-gold focus:ring-gold/40 w-full rounded-sm border px-4 py-3 text-sm outline-none focus:ring-2 mt-2 resize-y" placeholder="Your duas and wishes..." data-en-ph="Your duas and wishes..." data-ta-ph="உங்கள் துஆக்கள் மற்றும் வாழ்த்துகள்..."></textarea></div></div><div class="mt-8 text-center"><p id="rsvp-msg" class="text-rose mb-4 hidden text-sm" data-en="Jazak Allah Khair! Your response has been noted — we look forward to celebrating with you." data-ta="ஜசாக்கல்லாஹு கைரன்! உங்கள் பதில் பதிவு செய்யப்பட்டது — உங்களுடன் கொண்டாட ஆவலுடன் காத்திருக்கிறோம்.">Jazak Allah Khair! Your response has been noted — we look forward to celebrating with you.</p><button type="submit" class="border-gold bg-primary text-primary-foreground hover:bg-rose inline-flex rounded-sm border px-10 py-4 text-xs tracking-[0.25em] uppercase transition-colors disabled:opacity-60"><span class="i18n" data-en="Confirm attendance" data-ta="உறுதிப்படுத்தவும்">Confirm attendance</span></button></div></form></div></div></section><footer class="mx-auto max-w-2xl px-6 py-20 text-center"><p class="label-caps text-gold"><span class="i18n" data-en="With love, from" data-ta="அன்புடன்">With love, from</span></p><p class="font-display text-primary mt-4 text-2xl"><span class="i18n" data-en="(Marhoom) Mr. A. Kursheed Ali" data-ta="(மர்ஹூம்) திரு. ஏ. குர்ஷீத் அலி">(Marhoom) Mr. A. Kursheed Ali</span> <span class="i18n" data-en="Family" data-ta="குடும்பம்">Family</span></p><p class="text-muted-foreground mt-2 text-sm"><span class="i18n" data-en="Trichy" data-ta="திருச்சி">Trichy</span></p><p class="mt-6 text-sm"><a href="tel:+918608184277" class="text-primary hover:text-rose transition-colors">+91 86081 84277</a></p><div class="my-10"><div class="mx-auto flex w-full max-w-xs items-center gap-3"><span class="deco-rule flex-1"></span><span class="text-gold text-xs">✿</span><span class="deco-rule flex-1"></span></div></div><p class="font-display text-primary mt-4 text-2xl"><span class="i18n" data-en="Mr. A. Yahia Khan" data-ta="திரு. ஏ. யாஹியா கான்">Mr. A. Yahia Khan</span> <span class="i18n" data-en="Family" data-ta="குடும்பம்">Family</span></p><p class="text-muted-foreground mt-2 text-sm"><span class="i18n" data-en="Chennai" data-ta="சென்னை">Chennai</span></p><p class="mt-6 text-sm"><a href="tel:+917339417838" class="text-primary hover:text-rose transition-colors">+91 73394 17838</a></p><div class="my-10"><div class="mx-auto flex w-full max-w-xs items-center gap-3"><span class="deco-rule flex-1"></span><span class="text-gold text-xs">❖</span><span class="deco-rule flex-1"></span></div></div><p class="font-script text-rose text-3xl">Ibrahim &amp; Hajira</p><p class="text-muted-foreground mt-2 text-xs tracking-[0.25em] uppercase"><span class="i18n" data-en="Insha Allah · September 2026" data-ta="இன்ஷா அல்லாஹ் · செப்டம்பர் 2026">Insha Allah · September 2026</span></p></footer></main>
 <script>
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  revealEls.forEach(el => io.observe(el));
+  // Countdown — targets the Nikkah first (Sat, 19 Sep 2026, 11:00 AM).
+  // Once that moment passes, it automatically switches to counting down
+  // to the Valima instead (Sat, 26 Sep 2026 — "Evening" isn't given an
+  // exact time on the invite, so 6:00 PM is assumed here).
+  var nikkahMoment = new Date("2026-09-19T11:00:00");
+  var valimaMoment = new Date("2026-09-26T18:00:00");
+  var countdownLabel = document.getElementById("countdown-label");
 
-  // nav scroll shadow
-  const nav = document.getElementById('siteNav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  });
+  function pad(n){ return String(n).padStart(2, "0"); }
 
-  // mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-  // falling petals
-  const petalField = document.getElementById('petals');
-  const PETAL_COUNT = 16;
-  for(let i=0; i<PETAL_COUNT; i++){
-    const p = document.createElement('div');
-    p.className = 'petal';
-    const left = Math.random()*100;
-    const duration = 9 + Math.random()*8;
-    const delay = Math.random()*12;
-    const drift = (Math.random()*80 - 40) + 'px';
-    const size = 8 + Math.random()*10;
-    p.style.left = left + 'vw';
-    p.style.width = size + 'px';
-    p.style.height = size + 'px';
-    p.style.setProperty('--drift', drift);
-    p.style.animationDuration = duration + 's';
-    p.style.animationDelay = delay + 's';
-    petalField.appendChild(p);
+  function currentLang(){
+    return document.documentElement.lang === "ta" ? "ta" : "en";
   }
 
-  // live countdown to Nikkah, then Walima
-  const nikkahDate = new Date('2026-09-19T11:00:00+05:30').getTime();
-  const walimaDate = new Date('2026-09-26T00:00:00+05:30').getTime();
-  const captionEl = document.querySelector('.countdown-caption');
-  const dEl = document.getElementById('cd-days');
-  const hEl = document.getElementById('cd-hours');
-  const mEl = document.getElementById('cd-mins');
-  const sEl = document.getElementById('cd-secs');
+  function setCountdownLabel(en, ta){
+    if (!countdownLabel) return;
+    countdownLabel.dataset.en = en;
+    countdownLabel.dataset.ta = ta;
+    countdownLabel.textContent = currentLang() === "ta" ? ta : en;
+  }
 
-  function pad(n){ return String(n).padStart(2,'0'); }
+  function updateCountdown(){
+    var now = new Date();
+    var target;
 
-  function tick(){
-    const now = Date.now();
-    let target = nikkahDate;
-    let label = "Counting down to the Nikkah";
-    if(now > nikkahDate && now <= walimaDate){
-      target = walimaDate;
-      label = "Counting down to the Walima";
-    } else if(now > walimaDate){
-      dEl.textContent = hEl.textContent = mEl.textContent = sEl.textContent = "00";
-      captionEl.textContent = "Alhamdulillah — the celebrations have begun";
+    if (now < nikkahMoment) {
+      target = nikkahMoment;
+      setCountdownLabel("Counting down to the Nikkah", "நிக்காஹ்-க்கான எண்ணிக்கை");
+    } else if (now < valimaMoment) {
+      target = valimaMoment;
+      setCountdownLabel("Counting down to the Valima", "வலீமா-க்கான எண்ணிக்கை");
+    } else {
+      target = valimaMoment;
+      setCountdownLabel("Alhamdulillah — the celebrations have taken place", "அல்ஹம்துலில்லாஹ் — விழாக்கள் நிறைவடைந்தன");
+    }
+
+    var diff = Math.max(0, target - now);
+    var days = Math.floor(diff / 86400000);
+    var hours = Math.floor(diff / 3600000) % 24;
+    var mins = Math.floor(diff / 60000) % 60;
+    var secs = Math.floor(diff / 1000) % 60;
+
+    document.getElementById("cd-days").textContent = pad(days);
+    document.getElementById("cd-hours").textContent = pad(hours);
+    document.getElementById("cd-mins").textContent = pad(mins);
+    document.getElementById("cd-secs").textContent = pad(secs);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // RSVP — client-side only (static site, no backend). Shows a confirmation message.
+  var form = document.getElementById("rsvp-form");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = document.getElementById("rsvp-name").value.trim();
+    if (!name) {
+      document.getElementById("rsvp-name").focus();
       return;
     }
-    captionEl.textContent = label;
-    const diff = target - now;
-    const days = Math.floor(diff/86400000);
-    const hours = Math.floor((diff%86400000)/3600000);
-    const mins = Math.floor((diff%3600000)/60000);
-    const secs = Math.floor((diff%60000)/1000);
-    dEl.textContent = pad(days);
-    hEl.textContent = pad(hours);
-    mEl.textContent = pad(mins);
-    sEl.textContent = pad(secs);
-  }
-  tick();
-  setInterval(tick, 1000);
-</script>
+    document.getElementById("rsvp-msg").classList.remove("hidden");
+    form.reset();
+    document.getElementById("rsvp-nikkah").checked = true;
+    document.getElementById("rsvp-valima").checked = true;
+    document.getElementById("rsvp-guests").value = "1";
+  });
 
+  // Both Nikkah and Valima sections always stay on the page — nothing is
+  // ever hidden. From the visitor's SECOND visit onwards, we auto-navigate
+  // (scroll) straight to whichever section today's date points to, like
+  // simple in-page routing via #nikkah / #valima. First-time visitors land
+  // at the top and see the page in full, normal order.
+  (function(){
+    var VISITED_KEY = "site-visited";
+    var hasVisitedBefore = false;
+    try { hasVisitedBefore = localStorage.getItem(VISITED_KEY) === "true"; } catch(e) {}
+
+    if (hasVisitedBefore && !window.location.hash) {
+      var nikkahDate = new Date("2026-09-19T00:00:00");
+      var valimaEndDate = new Date("2026-09-26T23:59:59");
+      var now = new Date();
+      var targetId = null;
+
+      if (now < nikkahDate) {
+        targetId = "nikkah";
+      } else if (now >= nikkahDate && now <= valimaEndDate) {
+        targetId = "valima";
+      }
+      // After Valima day — no auto-route, land at the top as usual.
+
+      if (targetId) {
+        var target = document.getElementById(targetId);
+        if (target) {
+          window.requestAnimationFrame(function(){
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            history.replaceState(null, "", "#" + targetId);
+          });
+        }
+      }
+    }
+    // If the URL already has a hash (e.g. someone shared a direct #valima
+    // link), respect it and don't override with date-based routing.
+
+    try { localStorage.setItem(VISITED_KEY, "true"); } catch(e) {}
+  })();
+
+  // A little hello for anyone curious enough to open the console 👀
+  console.log(
+    "%cHi developer 👋",
+    "font-family: Georgia, serif; font-size: 22px; font-weight: bold; color: #a45a6c;"
+  );
+  console.log(
+    "%cI was looking for you — glad you opened this up to see what's inside. Really appreciate the curiosity. Go on, take a look around the code. And hey, if you're here... thank you for caring enough to check. 🌸\n\nWith love,\nIbrahim & Hajira",
+    "font-family: Georgia, serif; font-size: 16px; color: #7a6266; line-height: 1.6;"
+  );
+  console.log(
+    "%c'Swordfish' - go on, inspect (🔍) the Elements panel...",
+    "font-family: Georgia, serif; font-style: italic; color: #c9a15a; line-height: 1.6;"
+  );
+
+  // Language toggle — English / Tamil
+  (function(){
+    var toggle = document.getElementById("lang-toggle");
+    var label = document.getElementById("lang-toggle-label");
+    var i18nEls = document.querySelectorAll(".i18n");
+    var placeholderEls = document.querySelectorAll("[data-en-ph]");
+
+    function applyLang(lang){
+      i18nEls.forEach(function(el){
+        el.textContent = lang === "ta" ? el.dataset.ta : el.dataset.en;
+      });
+      placeholderEls.forEach(function(el){
+        el.setAttribute("placeholder", lang === "ta" ? el.dataset.taPh : el.dataset.enPh);
+      });
+      document.documentElement.lang = lang === "ta" ? "ta" : "en";
+      label.textContent = lang === "ta" ? "English" : "தமிழ்";
+      try { localStorage.setItem("site-lang", lang); } catch(e) {}
+    }
+
+    var saved = "en";
+    try { saved = localStorage.getItem("site-lang") || "en"; } catch(e) {}
+    applyLang(saved);
+
+    toggle.addEventListener("click", function(){
+      var current = document.documentElement.lang === "ta" ? "ta" : "en";
+      applyLang(current === "ta" ? "en" : "ta");
+    });
+  })();
+</script>
 </body>
 </html>

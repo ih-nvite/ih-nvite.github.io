@@ -79,12 +79,24 @@
         pointer-events: auto;
       }
       .fanoos.left {
-        left: 1%;
+        left: 6%;
         animation-delay: -1.4s;
       }
       .fanoos.right {
-        right: 1%;
+        right: 6%;
         animation-delay: -3.1s;
+      }
+      /* Mobile keeps the original edge position — that's what lets the
+         tassel reach the "Nikkah & Valima" text; the inward nudge above
+         is only to stop the lamps feeling disconnected from the
+         centered hero content on wide screens. */
+      @media (max-width: 640px) {
+        .fanoos.left {
+          left: 1%;
+        }
+        .fanoos.right {
+          right: 1%;
+        }
       }
       /* While actually being dragged, the JS drives `transform` directly
      from the pointer position, so the idle CSS sway is turned off.
@@ -596,12 +608,7 @@
             >
           </p>
           <p class="font-script text-rose mt-4 text-3xl">
-            <span
-              class="i18n"
-              data-en="Two cities, one union"
-              data-ta="இரு நகரங்கள், ஒரே பிணைப்பு"
-              >Two cities, one union</span
-            >
+            <span>Two cities, one union</span>
           </p>
         </div>
       </section>
@@ -826,12 +833,7 @@
                   >
                 </p>
                 <h2 class="font-script text-primary mt-3 text-5xl">
-                  <span
-                    class="i18n"
-                    data-en="Two cities, one union"
-                    data-ta="இரு நகரங்கள், ஒரே பிணைப்பு"
-                    >Two cities, one union</span
-                  >
+                  <span>Two cities, one union</span>
                 </h2>
               </div>
               <p class="label-caps text-gold">

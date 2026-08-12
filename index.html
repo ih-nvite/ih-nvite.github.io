@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
     <title>Ibrahim &amp; Hajira — Nikkah &amp; Valima Invitation</title>
     <meta name="author" content="Ibrahim &amp; Hajira" />
     <meta
@@ -1959,6 +1959,27 @@
           ? navigator.userAgent
           : "unknown";
 
+      // Coarse, human-readable browser name parsed out of the UA string —
+      // the raw string is annoying to eyeball in the Firestore console.
+      // Order matters: e.g. Edge/Opera/SamsungBrowser/Instagram all also
+      // contain "Chrome" in their UA, in-app browsers (Instagram/FBAN)
+      // also contain "Safari", so those must be checked first.
+      function detectBrowser(ua) {
+        if (ua === "unknown") return "unknown";
+        if (/Instagram/i.test(ua)) return "Instagram";
+        if (/FBAN|FBAV/i.test(ua)) return "Facebook";
+        if (/EdgiOS|EdgA|Edge|Edg\//i.test(ua)) return "Edge";
+        if (/OPR\/|Opera/i.test(ua)) return "Opera";
+        if (/SamsungBrowser/i.test(ua)) return "Samsung Internet";
+        if (/CriOS/i.test(ua)) return "Chrome"; // Chrome on iOS
+        if (/FxiOS/i.test(ua)) return "Firefox"; // Firefox on iOS
+        if (/Firefox/i.test(ua)) return "Firefox";
+        if (/Chrome/i.test(ua)) return "Chrome";
+        if (/Safari/i.test(ua)) return "Safari";
+        return "other";
+      }
+      var browser = detectBrowser(userAgent);
+
       // Network Information API — Chromium-based browsers only (Safari/iOS
       // and Firefox don't implement it, so this is "unknown" there).
       var conn =
@@ -2041,6 +2062,7 @@
           lang: document.documentElement.lang === "ta" ? "ta" : "en",
           device: deviceType,
           userAgent: userAgent,
+          browser: browser,
           network: networkInfo,
           location: geo || FALLBACK_LOCATION,
           createdAt: serverTimestamp(),

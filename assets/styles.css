@@ -63,6 +63,7 @@
   ::-webkit-outer-spin-button { height: auto; }
   [hidden]:where(:not([hidden="until-found"])) { display: none !important; }
   * { border-color: var(--color-border); }
+  :root { color-scheme: light; }
   body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
   h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
 }

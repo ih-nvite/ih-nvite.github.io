@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
     <title>Ibrahim &amp; Hajira — Nikkah &amp; Valima Invitation</title>
     <meta name="author" content="Ibrahim &amp; Hajira" />
     <meta
@@ -1948,6 +1949,16 @@
         ? "mobile"
         : "desktop";
 
+      // Raw UA string — mainly useful on Android, where it includes the
+      // exact model code (e.g. "SM-A536E"); iOS strips that out, so this
+      // is generic ("iPhone"/"iPad") there. "unknown" if the browser
+      // doesn't expose navigator.userAgent at all, so a missing/blocked
+      // API never breaks the visit log.
+      var userAgent =
+        typeof navigator !== "undefined" && navigator.userAgent
+          ? navigator.userAgent
+          : "unknown";
+
       // Network Information API — Chromium-based browsers only (Safari/iOS
       // and Firefox don't implement it, so this is "unknown" there).
       var conn =
@@ -2029,6 +2040,7 @@
           ip: (geo && geo.ip) || "unknown",
           lang: document.documentElement.lang === "ta" ? "ta" : "en",
           device: deviceType,
+          userAgent: userAgent,
           network: networkInfo,
           location: geo || FALLBACK_LOCATION,
           createdAt: serverTimestamp(),

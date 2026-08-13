@@ -63,7 +63,7 @@
   ::-webkit-outer-spin-button { height: auto; }
   [hidden]:where(:not([hidden="until-found"])) { display: none !important; }
   * { border-color: var(--color-border); }
-  :root { color-scheme: light dark; }
+  :root { color-scheme: light; }
   body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
   h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
 }
@@ -886,22 +886,15 @@
 
 :root { --radius: .5rem; --background: oklch(97.5% .014 82); --foreground: oklch(34% .025 40); --card: oklch(98.8% .008 85); --card-foreground: oklch(34% .025 40); --primary: oklch(44% .145 15); --primary-foreground: oklch(98% .01 85); --secondary: oklch(95.5% .018 60); --secondary-foreground: oklch(44% .145 15); --muted: oklch(95.5% .015 70); --muted-foreground: oklch(52% .03 40); --accent: oklch(72% .095 78); --accent-foreground: oklch(34% .025 40); --gold: oklch(70% .1 78); --gold-soft: oklch(85% .06 80); --rose: oklch(72% .11 18); --rose-soft: oklch(90% .045 20); --border: oklch(88% .035 75); --input: oklch(88% .035 75); --ring: oklch(70% .1 78); }
 
-/* Explicit dark palette — deep wine/maroon ground (same hue family as the
-   light theme's --primary/--rose, at low lightness + moderate chroma, so
-   it reads as a deliberate rich wine rather than the earlier muddy-brown
-   overlay bug or a generic neutral-charcoal fallback), with gold accents
-   for contrast. Re-tuned for a dark ground so a device/browser in dark
-   mode gets an intentional look instead of the browser heuristically
-   re-coloring the light palette itself. */
+/* Deliberately identical to the :root light values above — this design
+   is meant to look the same no matter the system/browser theme, so the
+   dark-mode query re-asserts the exact same palette instead of switching
+   to a different one. Combined with color-scheme: light (below), this
+   also stops browsers that auto-invert/recolor pages heuristically
+   (e.g. Android/Samsung "force dark") from doing so, since the page
+   both declares light-only support and never actually varies. */
 @media (prefers-color-scheme: dark) {
-  :root { --background: oklch(16% .045 20); --foreground: oklch(93% .012 75); --card: oklch(20% .05 18); --card-foreground: oklch(93% .012 75); --primary: oklch(85% .07 30); --primary-foreground: oklch(16% .045 20); --secondary: oklch(24% .05 20); --secondary-foreground: oklch(90% .03 60); --muted: oklch(22% .04 20); --muted-foreground: oklch(74% .025 40); --accent: oklch(74% .1 78); --accent-foreground: oklch(16% .045 20); --gold: oklch(74% .1 78); --gold-soft: oklch(48% .07 78); --rose: oklch(75% .1 15); --rose-soft: oklch(34% .07 20); --border: oklch(32% .05 25); --input: oklch(32% .05 25); --ring: oklch(74% .1 78); }
-
-  /* The hero's pastel-on-cream photo only gets a 45%-opacity tint in
-     light mode — nowhere near enough coverage to read as "dark" against
-     pale pink roses, which is what produced the muddy-brown look. Bump
-     it to near-opaque here so the photo reads as a deep, moody backdrop
-     instead of a translucent wash. */
-  .bg-background\/45 { background-color: color-mix(in oklab, var(--background) 88%, transparent); }
+  :root { --background: oklch(97.5% .014 82); --foreground: oklch(34% .025 40); --card: oklch(98.8% .008 85); --card-foreground: oklch(34% .025 40); --primary: oklch(44% .145 15); --primary-foreground: oklch(98% .01 85); --secondary: oklch(95.5% .018 60); --secondary-foreground: oklch(44% .145 15); --muted: oklch(95.5% .015 70); --muted-foreground: oklch(52% .03 40); --accent: oklch(72% .095 78); --accent-foreground: oklch(34% .025 40); --gold: oklch(70% .1 78); --gold-soft: oklch(85% .06 80); --rose: oklch(72% .11 18); --rose-soft: oklch(90% .045 20); --border: oklch(88% .035 75); --input: oklch(88% .035 75); --ring: oklch(70% .1 78); }
 }
 
 @keyframes rise { 
